@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@theme {
+  --color-theme-bg: var(--color-bg);
+  --color-theme-text: var(--color-text);
+  
+}
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant light (&:where(.light, .light *));
+
+@layer base {
+  .light {
+    --color-bg: #edf2ee;
+    --color-text: #171717;
+  }
+
+  .dark {
+    --color-bg: #171717;
+    --color-text: #edf2ee;
+  }
+}
